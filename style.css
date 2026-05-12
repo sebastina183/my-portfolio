@@ -1,0 +1,270 @@
+/* Base and Reset */
+:root {
+    --bg-color: #f8fafc;
+    --text-main: #1e293b;
+    --text-muted: #475569;
+    --primary-color: #0f172a;
+    --accent-color: #2563eb;
+    --border-color: #e2e8f0;
+    --card-bg: #ffffff;
+    --font-family: 'Inter', sans-serif;
+    --content-max-width: 800px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.container {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header Section */
+.header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+    text-align: center;
+}
+
+.name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.contact-info {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.separator {
+    color: #cbd5e1;
+}
+
+.links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.links a {
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 2.5rem;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section-content {
+    color: var(--text-main);
+}
+
+.summary-section p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* Items (Education, Projects, Internship) */
+.item {
+    margin-bottom: 1.5rem;
+}
+
+.item:last-child {
+    margin-bottom: 0;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.25rem;
+}
+
+.item-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.item-date {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.item-badge {
+    font-size: 0.8rem;
+    background-color: #eff6ff;
+    color: var(--accent-color);
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-weight: 500;
+}
+
+.item-subtitle {
+    font-weight: 500;
+    color: var(--text-main);
+    margin-bottom: 0.25rem;
+}
+
+.item-detail {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.item-list {
+    margin-top: 0.5rem;
+    padding-left: 1.25rem;
+    color: var(--text-muted);
+}
+
+.item-list li {
+    margin-bottom: 0.25rem;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.skill-category h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--primary-color);
+}
+
+.skill-category p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* Two Column Layout */
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+@media (min-width: 640px) {
+    .two-column {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* Simple List */
+.simple-list {
+    list-style-type: none;
+}
+
+.simple-list li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.simple-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.bullet-two-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem 1rem;
+}
+
+/* Footer */
+.footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: white;
+    }
+    .container {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .header {
+        border-bottom: 2px solid #000;
+    }
+    a {
+        text-decoration: none !important;
+        color: black !important;
+    }
+}
